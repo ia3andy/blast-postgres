@@ -4,7 +4,7 @@ metadata:
 components:
   - name: db-build
     image:
-      imageName: postgres-quarkus-blast:latest
+      imageName: quarkus-blast-postgres:latest
       dockerfile:
         uri: Dockerfile
         buildContext: .
