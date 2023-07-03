@@ -2,7 +2,7 @@ schemaVersion: 2.2.0
 metadata:
   name: quarkus-blast-postgres
 components:
-  - name: build
+  - name: image-build
     image:
       imageName: postgres-quarkus-blast:latest
       dockerfile:
