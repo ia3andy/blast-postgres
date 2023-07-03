@@ -24,10 +24,8 @@ items:
                     - name: pg-storage
                       mountPath: /var/lib/postgresql/data
               env:
-                - name: POSTGRES_USER
-                  value: blast
-                - name: POSTGRES_PASSWORD
-                  value: blast
+                - name: PGDATA
+                  value: /var/lib/postgresql/data/pgdata
           volumes:
             - name: pg-storage
               persistentVolumeClaim:
