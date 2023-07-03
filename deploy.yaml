@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: blast-postgres
-          image: postgres-quarkus-blast:latest
+          image: postgres:15.3
           env:
             - name: PGDATA
               value: /work/data
@@ -25,7 +25,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: blast-secret
-                  key: db-database
+                  key: db-name
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
@@ -47,7 +47,7 @@ spec:
               cpu: "500m"
               memory: "256Mi"
           volumeMounts:
-            - name: data-postgres-1
+            - name: blast-postgres-data
               mountPath: /work
       volumes:
         - name: blast-postgres-data
